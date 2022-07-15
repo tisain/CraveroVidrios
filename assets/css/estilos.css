@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+
+/*---------------- HEADER ----------------*/
+
+nav{
+    background: #227bff;
+    height: 80px;
+    width: 100%;
+}
+
+label{
+    padding: 0 100px;
+}
+
+label img{
+    width: 200px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #6893f1;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label img{
+        width: 150px;
+        padding-top: 10px;
+    }
+    nav ul li a{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:858px){
+    label img{
+        width: 140px;
+        padding-top: 10px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #164183;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #227bff;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/*---------------- FOOTER ----------------*/
+
+
+.pie-pagina{
+    width: 100%;
+    background-color: #227bff;
+    position: absolute;
+    bottom: 0;
+}
+
+.pie-pagina .grupo1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding: 25px 0px;
+}
+
+.pie-pagina .grupo1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie-pagina .grupo1 .box figure img{
+    width: 200px;
+}
+
+.pie-pagina .grupo1 .box h2{
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.pie-pagina .grupo1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.pie-pagina .grupo1 .red-social a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    margin-right: 10px;
+    background-color: #6893f1;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo1 .red-social a:hover{
+    color: black;
+}
+
+.pie-pagina .grupo2{
+    background-color: #6893f1;
+    padding: 0px 10px;
+    text-align: center;
+    color: #ffffff;
+    height: 25px;
+}
+
+.pie-pagina .grupo2 small{
+    font-size: 10px;
+}
+
+@media (max-width:858px){
+    .pie-pagina .grupo1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0px;
+        padding: 5px 0px;
+    }
+
+    .pie-pagina .grupo1 .box figure img{
+        width: 150px;
+    }
+
+    .pie-pagina .grupo1 .box h2{
+        color: #ffffff;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+
+
+    .pie-pagina .grupo1 .red-social a{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #ffffff;
+        margin-right: 10px;
+        background-color: #6893f1;
+        text-align: center;
+        border-radius: 10px;
+        transition: all 300ms ease;
+        margin-bottom: 5px;
+    }
+}
+
+/*---------------- INDEX ----------------*/
+
+
+body{
+    background-color: whitesmoke;
+    position: relative;
+    padding-bottom: 180px;
+    min-height: 100vh;
+}
+
+.pagina-inicio{
+    width: 100%;
+    height: 650px;
+}
+
+.cuerpo-contenedor{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .vidrieria{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.vidrieria img{
+    height: 350px;
+    border-radius: 15px;
+}
+
+main .mapa{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.mapa iframe{
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+@media (max-width: 858px){
+    .cuerpo-contenedor{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        padding: 25px;
+        gap: 10px;
+    }
+
+    main .vidrieria{
+        width: 100%;
+    }
+
+    .vidrieria img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .mapa{
+        width: 100%;
+    }
+
+    .mapa iframe{
+        width: 300px;
+        height: 300px;
+    }
+
+
+}
+
+
+/*------------------NOSOTROS---------------------*/
+
+.pagina-nosotros{
+    width: 100%;
+    height: 600px;
+    padding: 150px;
+    position: relative;
+    padding-bottom: 110px;
+}
+
+.cuerpo-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .descripcion-nosotros{
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+main .img-nosotros{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-nosotros img{
+    width: 400px;
+    height: 400px;
+}
+
+.carousel-item img{
+    height: 600px;
+    height: 600px;
+}
+
+/*------------------SERVICIOS---------------------*/
+
+.contenedor-card{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.contenedor-card .card img{
+    width: 300px;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+    color: #227bff;
+}
+
+.descripcion-servicios{
+    text-align: center;
+    padding: 5px 25px;
+    color: #000000;
+}
+
+.card{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-servicios{
+    width: 250px;
+}
+
+.card-tipo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-tipo img{
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px black;
+}
+
+hr{
+    width: 100%;
+    height: 2px;
+    background: #6893f1;
+    margin: 15px 5px;
+}
+
+/*------------------TRABAJOS---------------------*/
+
+.contenedor-img{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    
+}
+
+.contenedor-img .box-img figure{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-img .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-img .box-img:nth-child(1){
+    grid-row-start: span 2;
+}
+
+.contenedor-img .box-img:nth-child(2){
+    grid-row-start: span 2;
+}
+
+.contenedor-img .box-img:nth-child(5){
+    grid-column-start: span 2;
+}
+
+.contenedor-img .box-img:nth-child(8){
+    grid-column-start: span 2;
+}
+
+.contenedor-img .box-img:nth-child(9){
+    grid-column-start: span 2;
+}
+
+@media (max-width: 858px){
+    .contenedor-img{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contenedor-img .box-img:nth-child(10){
+        grid-column-start: span 2;
+    }
+}
+
+
+
+
+
+/*------------------CONTACTO---------------------*/
+
+.pagina-contacto{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    padding-bottom: 160px;
+}
+
+.contenedor-formulario{
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+.contenedor-formulario h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #227bff;
+}
+
+.contenido-formulario{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contenido-formulario .info{
+    width: 50%;
+}
+
+.contenido-formulario .formulario{
+    width: 50%;
+}
+
+.info{
+    padding-left: 10px;
+}
+
+.info .col{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.info .col .icono{
+    color:#227bff;
+    margin-right: 10px;
+}
+
+.info .col p{
+    color: #999;
+}
+
+.info .red-social{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info .red-social a{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #227bff;
+    color: #ffffff;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+}
+
+.info .red-social a:hover{
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+    background: #000000;
+}
+
+.formulario{
+    padding-left: 10px;
+}
+
+.formulario input[type='text'],
+.formulario textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border: 1px solid #999;
+    color: #999;
+    font-weight: 400;
+    outline: 0;
+}
+
+.formulario textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 120px;
+}
+
+.formulario input[type='text']:focus,
+.formulario textarea:focus{
+    border: 2px solid #227bff;
+}
